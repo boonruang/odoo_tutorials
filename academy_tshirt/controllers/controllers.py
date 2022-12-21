@@ -38,6 +38,6 @@ class AcademyTshirt(http.Controller):
         })
         return request.render('academy_tshirt.thank_you')
 
-    @http.route('/academy_tshirt/statistics', type='json', auth='user')
-    def get_statistics(self):
-        return http.request.env['academy_tshirt_order'].get_statistics()
+    # @http.route('/academy_tshirt/statistics', type='json', auth='user')
+    # def get_statistics(self):
+    #     return http.request.env['academy_tshirt_order'].get_statistics()
