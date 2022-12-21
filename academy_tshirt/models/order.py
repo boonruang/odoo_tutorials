@@ -16,9 +16,9 @@ class ShirtOrder(models.Model):
     _rec_name = 'customer_id'
     _inherit = ['mail.thread']
 
-    # @api.model
-    # def _expand_states(self,states,domain,order):
-    #     return [key for key, val in type(self).state.selection]
+    @api.model
+    def _expand_states(self,states,domain,order):
+        return [key for key, val in type(self).state.selection]
 
     amount = fields.Float('Amount', compute='_compute_amount', store=True)
     customer_id = fields.Many2one('res.partner',string="Customer")
