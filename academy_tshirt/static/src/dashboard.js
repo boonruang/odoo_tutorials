@@ -5,8 +5,9 @@ import { Layout } from "@web/search/layout";
 import { getDefaultConfig } from "@web/views/view";
 import { useService } from "@web/core/utils/hooks"
 import { Domain } from "@web/core/domain"
+import { Card } from "./card/card"
 
-const { Component,useSubEnv } = owl;
+const { Component,useSubEnv, onWillStart } = owl;
 
 class AcademyDashboard extends Component {
     setup() {
@@ -22,9 +23,21 @@ class AcademyDashboard extends Component {
         };
 
         this.action = useService("action");
+        this.rpc = useService("rpc");
+
+        this.keyToString = {
+            average_quantity: "the average number of t-shirts by order",
+            average_time: "the average for an order to go from 'new' to 'sent' or 'cancelled'",
+            nb_cancelled_orders: "Number of cancelled orders this month",
+            nb_new_orders: "the number of new orders this month",
+            total_amount: "the total amount of orders this month" 
+        }
+        onWillStart(async () => {
+            this.statistics = await this.rpc("/academy_tshirt/statistics")
+        })
 
     }
-
+    
     openCustomerView() {
         this.action.doAction("base.action_partner_form");
     }
@@ -55,7 +68,7 @@ class AcademyDashboard extends Component {
     }    
 }
 
-AcademyDashboard.components = { Layout };
+AcademyDashboard.components = { Layout, Card };
 AcademyDashboard.template = "academy_tshirt.clientaction";
 
 registry.category("actions").add("academy_tshirt.dashboard",AcademyDashboard)
