@@ -10,6 +10,14 @@
             </t>
         </Layout>
         <t t-call="academy_tshirt.clientaction.stat"/>
+
+        <div class="m-3">
+            <Card className="'w-25'">
+                <t t-set-slot="title">Shirt Order by size</t>
+                <PieChart data="statistics['orders_by_size']" label="'Shirt orders by size'"/>
+            </Card>
+        </div>
+
     </t>
 
     <t t-name="academy_tshirt.clientaction.stat" owl="1">

@@ -12,5 +12,9 @@ Card.props = {
             default : Object,
             title: { type: Object, optional: true}
         }
+    },
+    className: {
+        type : String,
+        optional : true
     }
 }

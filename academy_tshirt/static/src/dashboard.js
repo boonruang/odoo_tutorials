@@ -6,6 +6,7 @@ import { getDefaultConfig } from "@web/views/view";
 import { useService } from "@web/core/utils/hooks"
 import { Domain } from "@web/core/domain"
 import { Card } from "./card/card"
+import { PieChart } from "./pie_chart/pie_chart"
 
 const { Component,useSubEnv, onWillStart } = owl;
 
@@ -70,7 +71,7 @@ class AcademyDashboard extends Component {
     }    
 }
 
-AcademyDashboard.components = { Layout, Card };
+AcademyDashboard.components = { Layout, Card, PieChart };
 AcademyDashboard.template = "academy_tshirt.clientaction";
 
 registry.category("actions").add("academy_tshirt.dashboard",AcademyDashboard)
