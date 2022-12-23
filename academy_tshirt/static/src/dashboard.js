@@ -23,7 +23,8 @@ class AcademyDashboard extends Component {
         };
 
         this.action = useService("action");
-        this.rpc = useService("rpc");
+        // this.rpc = useService("rpc");
+        this.tshirtService = useService("tshirtService");
 
         this.keyToString = {
             average_quantity: "the average number of t-shirts by order",
@@ -33,7 +34,8 @@ class AcademyDashboard extends Component {
             total_amount: "the total amount of orders this month" 
         }
         onWillStart(async () => {
-            this.statistics = await this.rpc("/academy_tshirt/statistics")
+            // this.statistics = await this.rpc("/academy_tshirt/statistics");
+            this.statistics = await this.tshirtService.loadStatistics();
         })
 
     }

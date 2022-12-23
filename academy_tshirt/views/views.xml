@@ -109,6 +109,11 @@
       <field name="tag">academy_tshirt.dashboard</field>
     </record>    
 
+     <record model="ir.actions.client" id="myservice">
+      <field name="name">VPANO Statistics</field>
+      <field name="tag">academy_tshirt.myservice</field>
+    </record>    
+
     <!-- Top menu item -->
 
     <menuitem name="Academy Tshirt" id="academy_tshirt.menu_root"/>
@@ -117,10 +122,10 @@
 
     <menuitem name="Dashboard" id="academy_tshirt.dashboard_menu" parent="academy_tshirt.menu_root" action="academy_tshirt.dashboard" sequence="1"/>
     <menuitem name="T-shirt Orders" id="academy_tshirt.menu_2" parent="academy_tshirt.menu_root" action="academy_tshirt.action_window" sequence="2"/>
+    <menuitem name="Services" id="academy_tshirt.menu_3" parent="academy_tshirt.menu_root" action="academy_tshirt.myservice" sequence="10" />
 
     <!-- actions -->
     <!-- action="academy_tshirt.action_window" -->
-    <!-- <menuitem name="Call dashboard.js" id="academy_tshirt.menu_1_list" parent="academy_tshirt.dashboard_menu" action="academy_tshirt.dashboard" sequence="10" /> -->
 
     <!-- action="academy_tshirt.action_server"               -->
     <!-- <menuitem name="action_server" id="academy_tshirt" parent="academy_tshirt.menu_2" action="academy_tshirt.action_window"/> -->
