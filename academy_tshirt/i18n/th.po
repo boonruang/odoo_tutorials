@@ -209,7 +209,7 @@ msgstr "สั่งซื้อ"
 #. module: academy_tshirt
 #: model:ir.model.fields.selection,name:academy_tshirt.selection__academy_tshirt_order__state__printed
 msgid "Printed"
-msgstr "พิ่มพ์แล้ว"
+msgstr "พิมพ์แล้ว"
 
 #. module: academy_tshirt
 #: model:ir.model.fields,field_description:academy_tshirt.field_academy_tshirt_order__quantity
