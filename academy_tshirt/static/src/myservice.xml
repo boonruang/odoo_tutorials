@@ -5,26 +5,37 @@
         <Layout display="display">
             <t t-set-slot="control-panel-bottom-left">
                 <button class="btn btn-primary" t-on-click="openCustomerView"> Customers </button>
+                <button class="btn btn-primary" t-on-click="increment"> Click me! [<t <t t-esc="state.value"/>]</button>
             </t>
         </Layout>
 
-        <t t-call="academy_tshirt.serviceaction.logchain"/>
+        <div class="h-100 o_academy_tshirt_dashboard">
+            <t t-call="academy_tshirt.serviceaction.logchain"/>
 
-        <div class="m-3">
-            <Card className="'w-25'">
-                <t t-set-slot="title">Shirt Order by size</t>
-                <PieChart data="statistics['orders_by_size']" label="'Shirt orders by size'"/>
-            </Card>
-        </div>        
+            <div class="m-3">
+                <Card className="'w-25'">
+                    <t t-set-slot="title">Shirt orders by size</t>
+                    <PieChart data="statistics['orders_by_size']" label="'Shirt orders by size'" onPieClick.bind="openFilteredBySizeOrders"/>
+                </Card>
+            </div>
+
+            <div class="m-3">
+                <Card className="'w-25'">
+                    <t t-set-slot="title">Shirt orders by size</t>
+                    <LineChart data="statistics['orders_by_size']" label="'Shirt orders by size'" onLineClick.bind="openFilteredBySizeOrders"/>
+                </Card>
+            </div>        
+
+        </div>       
 
     </t>
 
     <t t-name="academy_tshirt.serviceaction.logchain" owl="1">
         <div class="d-flex flex-nowarp">
-            <div t-foreach="keyToString" t-as="key" t-key="key" class="m-2">
+            <div t-foreach="keyToString" t-as="i" t-key="i" class="m-2">
                 <Card>
-                    <t t-set-slot="title"><t t-esc="keyToString[key]"/></t>
-                    <p class="card-text"><t t-esc="statistics[key]"/></p>
+                    <t t-set-slot="title"><t t-esc="keyToString[i]"/></t>
+                    <p class="card-text"><t t-esc="statistics[i]"/></p>
                 </Card>
             </div>
         </div>

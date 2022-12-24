@@ -1,0 +1,330 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* academy_tshirt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.5alpha1+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-10 11:51+0000\n"
+"PO-Revision-Date: 2022-09-10 11:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: academy_tshirt
+#. openerp-web
+#: code:addons/academy_tshirt/static/src/TodoList/TodoList.xml:0
+#, python-format
+msgid "Add a todo"
+msgstr "เพิ่ม สิ่งที่จะทำ"
+
+#. module: academy_tshirt
+#: model_terms:ir.ui.view,arch_db:academy_tshirt.order_public_page
+msgid "Address"
+msgstr "ที่อยู่"
+
+#. module: academy_tshirt
+#: model:ir.model.fields,field_description:academy_tshirt.field_academy_tshirt_order__amount
+msgid "Amount"
+msgstr "จำนวน"
+
+#. module: academy_tshirt
+#: model_terms:ir.ui.view,arch_db:academy_tshirt.orders_kanban_view
+msgid "Amount:"
+msgstr "จำนวน"
+
+#. module: academy_tshirt
+#: model:ir.ui.menu,name:academy_tshirt.menu_root
+msgid "Academy T-Shirts"
+msgstr "อคาเดมี่ทีเชิ้ต"
+
+#. module: academy_tshirt
+#: model:ir.model,name:academy_tshirt.model_academy_tshirt_order
+msgid "Academy T-shirt Orders"
+msgstr "การสั่งซื้อ อคาเดมี่ทีเชิ้ต"
+
+#. module: academy_tshirt
+#: model:ir.model.fields.selection,name:academy_tshirt.selection__academy_tshirt_order__state__cancelled
+msgid "Cancelled"
+msgstr "ยกเลิก"
+
+#. module: academy_tshirt
+#. openerp-web
+#: code:addons/academy_tshirt/static/src/ลูกค้า_action.xml:0
+#, python-format
+msgid "Cancelled Orders"
+msgstr "ยกเลิกการสั่ง"
+
+#. module: academy_tshirt
+#. openerp-web
+#: code:addons/academy_tshirt/static/src/Counter/Counter.xml:0
+#, python-format
+msgid "Counter:"
+msgstr "จำนวน:"
+
+#. module: academy_tshirt
+#: model:ir.model.fields,field_description:academy_tshirt.field_academy_tshirt_order__create_uid
+msgid "Created by"
+msgstr "สร้างโดย"
+
+#. module: academy_tshirt
+#: model:ir.model.fields,field_description:academy_tshirt.field_academy_tshirt_order__create_date
+msgid "Created on"
+msgstr "สร้างเมื่อ"
+
+#. module: academy_tshirt
+#: model_terms:ir.ui.view,arch_db:academy_tshirt.orders_kanban_view
+msgid "Created:"
+msgstr "สร้างแล้ว:"
+
+#. module: academy_tshirt
+#: model:ir.model.fields,field_description:academy_tshirt.field_academy_tshirt_order__customer_id
+msgid "Customer"
+msgstr "ลูกค้า"
+
+#. module: academy_tshirt
+#: model_terms:ir.ui.view,arch_db:academy_tshirt.orders_kanban_view
+msgid "Customer:"
+msgstr "ลูกค้า:"
+
+#. module: academy_tshirt
+#. openerp-web
+#: code:addons/academy_tshirt/static/src/ลูกค้า_action.xml:0
+#, python-format
+msgid "Customers"
+msgstr "ลูกค้า"
+
+#. module: academy_tshirt
+#: model:ir.actions.ลูกค้า,name:academy_tshirt.dashboard
+#: model:ir.ui.menu,name:academy_tshirt.dashboard_menu
+msgid "Dashboard"
+msgstr "หน้าปัด"
+
+#. module: academy_tshirt
+#: model:ir.actions.client,name:academy_tshirt.action_window
+#: model:ir.ui.menu,name:academy_tshirt.order_menu
+msgid "T-shirt Orders"
+msgstr "การสั่งซื้อ"
+
+#. module: academy_tshirt
+#: model:ir.actions.client,name:academy_tshirt.myservice
+#: model:ir.ui.menu,name:academy_tshirt.myservice_menu
+msgid "Services"
+msgstr "บริการ"
+
+#. module: academy_tshirt
+#: model:ir.model.fields,field_description:academy_tshirt.field_academy_tshirt_order__display_name
+msgid "Display Name"
+msgstr "ชื่อแสดง"
+
+#. module: academy_tshirt
+#: model_terms:ir.ui.view,arch_db:academy_tshirt.order_public_page
+msgid "Email"
+msgstr "อีเมล์"
+
+#. module: academy_tshirt
+#: model:ir.model.fields,field_description:academy_tshirt.field_academy_tshirt_order__id
+msgid "ID"
+msgstr "ไอดี"
+
+#. module: academy_tshirt
+#: model:ir.model.fields,field_description:academy_tshirt.field_academy_tshirt_order__image_url
+msgid "Image"
+msgstr "รูป"
+
+#. module: academy_tshirt
+#: model_terms:ir.ui.view,arch_db:academy_tshirt.order_public_page
+msgid "Image URL"
+msgstr "URL รูป"
+
+#. module: academy_tshirt
+#. openerp-web
+#: code:addons/academy_tshirt/static/src/Counter/Counter.xml:0
+#, python-format
+msgid "Increment"
+msgstr "เพิ่มขึ้น"
+
+#. module: academy_tshirt
+#: model:ir.model.fields,field_description:academy_tshirt.field_academy_tshirt_order__is_late
+msgid "Is late"
+msgstr "ส่งช้า"
+
+#. module: academy_tshirt
+#: model:ir.model.fields,field_description:academy_tshirt.field_academy_tshirt_order____last_update
+msgid "Last Modified on"
+msgstr "การแก้ไขล่าสุด"
+
+#. module: academy_tshirt
+#: model:ir.model.fields,field_description:academy_tshirt.field_academy_tshirt_order__write_uid
+msgid "Last Updated by"
+msgstr "การปรับปรุงล่าสุด"
+
+#. module: academy_tshirt
+#: model:ir.model.fields,field_description:academy_tshirt.field_academy_tshirt_order__write_date
+msgid "Last Updated on"
+msgstr "การปรับปรุงล่าสุดเมื่อ"
+
+#. module: academy_tshirt
+#: model_terms:ir.ui.view,arch_db:academy_tshirt.thank_you
+msgid "Make another order"
+msgstr "ทำการสั่งซื้อต่อไป"
+
+#. module: academy_tshirt
+#: model_terms:ir.ui.view,arch_db:academy_tshirt.order_public_page
+msgid "Name"
+msgstr "ชื่อ"
+
+#. module: academy_tshirt
+#: model:ir.model.fields.selection,name:academy_tshirt.selection__academy_tshirt_order__state__new
+msgid "New"
+msgstr "ใหม่"
+
+#. module: academy_tshirt
+#. openerp-web
+#: code:addons/academy_tshirt/static/src/ลูกค้า_action.xml:0
+#, python-format
+msgid "New Orders"
+msgstr "สั่งซื้อใหม่"
+
+#. module: academy_tshirt
+#: model_terms:ir.ui.view,arch_db:academy_tshirt.order_public_page
+msgid "Order"
+msgstr "สั่งซื้อ"
+
+#. module: academy_tshirt
+#: model_terms:ir.ui.view,arch_db:academy_tshirt.order_public_page
+msgid "Order academy custom t-shirts"
+msgstr "สั่งซื้อ Academy t-shirts"
+
+#. module: academy_tshirt
+#: model:ir.actions.act_window,name:academy_tshirt.orders
+#: model:ir.ui.menu,name:academy_tshirt.order
+msgid "Orders"
+msgstr "สั่งซื้อ"
+
+#. module: academy_tshirt
+#: model:ir.model.fields.selection,name:academy_tshirt.selection__academy_tshirt_order__state__printed
+msgid "Printed"
+msgstr "พิ่มพ์แล้ว"
+
+#. module: academy_tshirt
+#: model:ir.model.fields,field_description:academy_tshirt.field_academy_tshirt_order__quantity
+#: model_terms:ir.ui.view,arch_db:academy_tshirt.order_public_page
+msgid "Quantity"
+msgstr "จำนวน:"
+
+#. module: academy_tshirt
+#: model_terms:ir.ui.view,arch_db:academy_tshirt.orders_kanban_view
+msgid "Quantity:"
+msgstr "จำนวน:"
+
+#. module: academy_tshirt
+#: model:ir.model.fields.selection,name:academy_tshirt.selection__academy_tshirt_order__state__sent
+msgid "Sent"
+msgstr "ส่งแล้ว"
+
+#. module: academy_tshirt
+#. openerp-web
+#: code:addons/academy_tshirt/static/src/ลูกค้า_action.xml:0
+#, python-format
+msgid "Shirt orders by size"
+msgstr "สั่งซื้อตามขนาด"
+
+#. module: academy_tshirt
+#: model:ir.model.fields,field_description:academy_tshirt.field_academy_tshirt_order__size
+#: model_terms:ir.ui.view,arch_db:academy_tshirt.order_public_page
+msgid "Size"
+msgstr "ไซส์"
+
+#. module: academy_tshirt
+#: model_terms:ir.ui.view,arch_db:academy_tshirt.orders_kanban_view
+msgid "Size:"
+msgstr "ไซส์:"
+
+#. module: academy_tshirt
+#: model:ir.model.fields,field_description:academy_tshirt.field_academy_tshirt_order__state
+msgid "State"
+msgstr "State"
+
+#. module: academy_tshirt
+#: model_terms:ir.ui.view,arch_db:academy_tshirt.thank_you
+msgid "Thanks for your order!"
+msgstr ""
+
+#. module: academy_tshirt
+#: model:ir.model.fields.selection,name:academy_tshirt.selection__academy_tshirt_order__size__xl
+#: model_terms:ir.ui.view,arch_db:academy_tshirt.order_public_page
+msgid "XL"
+msgstr ""
+
+#. module: academy_tshirt
+#: model:ir.model.fields.selection,name:academy_tshirt.selection__academy_tshirt_order__size__xxl
+#: model_terms:ir.ui.view,arch_db:academy_tshirt.order_public_page
+msgid "XXL"
+msgstr ""
+
+#. module: academy_tshirt
+#: model:ir.model.fields,help:academy_tshirt.field_academy_tshirt_order__image_url
+msgid "encodes the url of the image"
+msgstr "เข้ารหัส URL รูป"
+
+#. module: academy_tshirt
+#. openerp-web
+#: code:addons/academy_tshirt/static/src/ลูกค้า_action.js:0
+#, python-format
+msgid "Average amount of t-shirt by order this month"
+msgstr "จำนวนเฉลี่ยสั่งซื้อ"
+
+#. module: academy_tshirt
+#. openerp-web
+#: code:addons/academy_tshirt/static/src/ลูกค้า_action.js:0
+#, python-format
+msgid "Average time for an order to go from 'new' to 'sent' or 'cancelled'"
+msgstr "เวลาเฉลี่ยสั่งซื้อจาก 'new' ถึง 'sent' หรือ 'cancelled'"
+
+#. module: academy_tshirt
+#. openerp-web
+#: code:addons/academy_tshirt/static/src/ลูกค้า_action.js:0
+#, python-format
+msgid "Last 7 days cancelled orders"
+msgstr "รายการยกเลิก 7 วันล่าสุด"
+
+#. module: academy_tshirt
+#. openerp-web
+#: code:addons/academy_tshirt/static/src/ลูกค้า_action.js:0
+#, python-format
+msgid "Last 7 days orders"
+msgstr "รายการสั่งซื้อ 7 วันล่าสุด"
+
+#. module: academy_tshirt
+#. openerp-web
+#: code:addons/academy_tshirt/static/src/ลูกค้า_action.js:0
+#, python-format
+msgid "Number of cancelled orders this month"
+msgstr "จำนวนการยกเลิกคำสั่งซื้อเดือนนี้"
+
+#. module: academy_tshirt
+#. openerp-web
+#: code:addons/academy_tshirt/static/src/ลูกค้า_action.js:0
+#, python-format
+msgid "Number of new orders this month"
+msgstr "จำนวนคำสั่งซื้อใหม่เดือนนี้"
+
+
+#. module: academy_tshirt
+#. openerp-web
+#: code:addons/academy_tshirt/static/src/ลูกค้า_action.js:0
+#, python-format
+msgid "Total amount of new orders this month"
+msgstr "จำนวนรวมคำสั่งซื้อใหม่เดือนนี้"
+
+#. module: academy_tshirt
+#. openerp-web
+#: code:addons/academy_tshirt/static/src/ลูกค้า_action.js:0
+#, python-format
+msgid "Filtered orders by %s size"
+msgstr "กรองคำสั่งซื้อตามไซส์ %s"

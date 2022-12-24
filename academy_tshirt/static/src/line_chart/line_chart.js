@@ -5,7 +5,7 @@ import { getColor } from "@web/views/graph/colors";
 
 const { Component, onWillStart, useRef, onMounted, onWillUnmount } = owl;
 
-export class PieChart extends Component {
+export class LineChart extends Component {
     setup() {
         this.canvasRef = useRef("canvas");
 
@@ -30,9 +30,9 @@ export class PieChart extends Component {
         });
     }
 
-    onPieClick(ev, chartElem) {
+    onLineClick(ev, chartElem) {
         const clickedIndex = chartElem[0]._index;
-        this.props.onPieClick(this.labels[clickedIndex]);
+        this.props.onLineClick(this.labels[clickedIndex]);
     }
 
     renderChart() {
@@ -40,7 +40,7 @@ export class PieChart extends Component {
             this.chart.destroy();
         }
         this.chart = new Chart(this.canvasRef.el, {
-            type: "pie",
+            type: "bar",
             data: {
                 labels: this.labels,
                 datasets: [
@@ -52,15 +52,15 @@ export class PieChart extends Component {
                 ],
             },
             options: {
-                onClick: this.onPieClick.bind(this),
+                onClick: this.onLineClick.bind(this),
             },            
         });
     }
 }
 
-PieChart.template = "academy_tshirt.PieChart";
-PieChart.props = {
+LineChart.template = "academy_tshirt.LineChart";
+LineChart.props = {
     data: { type: Object },
     label: { type: String },
-    onPieClick: { type: Function },
+    onLineClick: { type: Function },
 };

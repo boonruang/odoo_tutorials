@@ -121,8 +121,8 @@
     <!-- menu categories -->
 
     <menuitem name="Dashboard" id="academy_tshirt.dashboard_menu" parent="academy_tshirt.menu_root" action="academy_tshirt.dashboard" sequence="1"/>
-    <menuitem name="T-shirt Orders" id="academy_tshirt.menu_2" parent="academy_tshirt.menu_root" action="academy_tshirt.action_window" sequence="2"/>
-    <menuitem name="Services" id="academy_tshirt.menu_3" parent="academy_tshirt.menu_root" action="academy_tshirt.myservice" sequence="10" />
+    <menuitem name="T-shirt Orders" id="academy_tshirt.order_menu" parent="academy_tshirt.menu_root" action="academy_tshirt.action_window" sequence="2"/>
+    <menuitem name="Services" id="academy_tshirt.myservice_menu" parent="academy_tshirt.menu_root" action="academy_tshirt.myservice" sequence="10" />
 
     <!-- actions -->
     <!-- action="academy_tshirt.action_window" -->
