@@ -30,7 +30,7 @@ msgstr "ที่อยู่"
 #. module: academy_tshirt
 #: model:ir.model.fields,field_description:academy_tshirt.field_academy_tshirt_order__amount
 msgid "Amount"
-msgstr "จำนวน"
+msgstr "มูลค่า"
 
 #. module: academy_tshirt
 #: model_terms:ir.ui.view,arch_db:academy_tshirt.orders_kanban_view
