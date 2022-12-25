@@ -53,6 +53,15 @@ export class LineChart extends Component {
             },
             options: {
                 onClick: this.onLineClick.bind(this),
+                scales: {
+                    yAxes: [
+                        {
+                          ticks: {
+                            beginAtZero: true
+                          }
+                        }
+                      ]
+                }
             },            
         });
     }

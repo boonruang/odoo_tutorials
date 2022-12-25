@@ -2,16 +2,16 @@
 
 import { registry } from "@web/core/registry";
 
-const { Component } = owl;
+const { Component,markup } = owl;
 
 class OrderWarningWidget extends Component {
     get warnings() {
         const warningsList = [];
         if (this.props.record.data.image_url.length === 0){
-            warningsList.push("This is no image");
+            warningsList.push(markup("This is no <b> image </b>"));
         }
         if (this.props.record.data.amount > 100) {
-            warningsList.push("Add promotional meterial");
+            warningsList.push(markup("Add promotional <b> meterial </b>"));
         }
         return warningsList;
     }

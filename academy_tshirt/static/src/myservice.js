@@ -48,6 +48,10 @@ class myService extends Component {
         this.state.value++;
     }
 
+    decrement() {
+        this.state.value--;
+    }
+
     openCustomerView() {
         this.action.doAction("base.action_partner_form");
     }
