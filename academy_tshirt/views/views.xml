@@ -7,7 +7,7 @@
       <field name="name">academy_tshirt.orders.form</field>
       <field name="model">academy_tshirt_order</field>
       <field name="arch" type="xml">
-        <form>
+        <form js_class="order_form_view">
           <header>
             <field name="state" widget="statusbar" clickable="1"/>
           </header>

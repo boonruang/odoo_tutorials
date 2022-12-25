@@ -57,16 +57,16 @@ class ShirtOrder(models.Model):
         for record in self:
             record.is_late = record.create_date < datetime.today() - timedelta(days=7)
     
-    # def print_label(self):
-    #     """
-    #     Simulate printing
-    #     """
-    #     time.sleep(0.5)
-    #     if random.random() < 0.1:
-    #         _logger.info('Printer not connected')
-    #         return False
-    #     _logger.info('Label printed')
-    #     return True
+    def print_label(self):
+        """
+        Simulate printing
+        """
+        time.sleep(0.5)
+        if random.random() < 0.1:
+            _logger.info('Printer not connected')
+            return False
+        _logger.info('Label printed')
+        return True
 
     # @api.model
     # def get_empty_list_help(self,help):

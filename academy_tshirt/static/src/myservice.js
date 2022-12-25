@@ -8,6 +8,8 @@ import { Layout } from "@web/search/layout";
 import { Card } from "./card/card"
 import { PieChart } from "./pie_chart/pie_chart"
 import { LineChart } from "./line_chart/line_chart"
+import { BarChart } from "./bar_chart/bar_chart"
+import { DoughnutChart } from "./doughnut_chart/doughnut_chart"
 import { sprintf } from "@web/core/utils/strings"
 
 const { Component,useSubEnv,onWillStart, useState } = owl;
@@ -76,6 +78,6 @@ class myService extends Component {
     }    
 }
 
-myService.components = { Layout, Card, PieChart, LineChart };
+myService.components = { Layout, Card, PieChart, LineChart, BarChart, DoughnutChart };
 myService.template = "academy_tshirt.serviceaction";
 registry.category("actions").add("academy_tshirt.myservice",myService)

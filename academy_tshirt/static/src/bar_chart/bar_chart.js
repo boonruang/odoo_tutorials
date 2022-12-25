@@ -5,7 +5,7 @@ import { getColor } from "@web/views/graph/colors";
 
 const { Component, onWillStart, useRef, onMounted, onWillUnmount } = owl;
 
-export class LineChart extends Component {
+export class BarChart extends Component {
     setup() {
         this.canvasRef = useRef("canvas");
 
@@ -30,9 +30,9 @@ export class LineChart extends Component {
         });
     }
 
-    onLineClick(ev, chartElem) {
+    onBarClick(ev, chartElem) {
         const clickedIndex = chartElem[0]._index;
-        this.props.onLineClick(this.labels[clickedIndex]);
+        this.props.onBarClick(this.labels[clickedIndex]);
     }
 
     renderChart() {
@@ -40,31 +40,36 @@ export class LineChart extends Component {
             this.chart.destroy();
         }
         this.chart = new Chart(this.canvasRef.el, {
-            type: "line",
+            type: "bar",
             data: {
                 labels: this.labels,
                 datasets: [
                     {
                         label: this.env._t(this.props.label),
                         data: this.data,
-                        // backgroundColor: '#F9B078',
-                        borderColor: '#F7367D',
-                        fill: false,
-                        cubicInterpolationMode: 'monotone',
-                        tension: 0.4
+                        backgroundColor: this.color,
                     },
                 ],
             },
             options: {
-                onClick: this.onLineClick.bind(this),
+                onClick: this.onBarClick.bind(this),
+                scales: {
+                    yAxes: [
+                        {
+                          ticks: {
+                            beginAtZero: true
+                          }
+                        }
+                      ]
+                }
             },            
         });
     }
 }
 
-LineChart.template = "academy_tshirt.LineChart";
-LineChart.props = {
+BarChart.template = "academy_tshirt.BarChart";
+BarChart.props = {
     data: { type: Object },
     label: { type: String },
-    onLineClick: { type: Function },
+    onBarClick: { type: Function },
 };

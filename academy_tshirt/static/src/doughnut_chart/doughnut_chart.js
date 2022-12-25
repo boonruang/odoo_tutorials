@@ -5,7 +5,7 @@ import { getColor } from "@web/views/graph/colors";
 
 const { Component, onWillStart, useRef, onMounted, onWillUnmount } = owl;
 
-export class LineChart extends Component {
+export class DoughnutChart extends Component {
     setup() {
         this.canvasRef = useRef("canvas");
 
@@ -30,9 +30,9 @@ export class LineChart extends Component {
         });
     }
 
-    onLineClick(ev, chartElem) {
+    onDoughnutClick(ev, chartElem) {
         const clickedIndex = chartElem[0]._index;
-        this.props.onLineClick(this.labels[clickedIndex]);
+        this.props.onDoughnutClick(this.labels[clickedIndex]);
     }
 
     renderChart() {
@@ -40,31 +40,27 @@ export class LineChart extends Component {
             this.chart.destroy();
         }
         this.chart = new Chart(this.canvasRef.el, {
-            type: "line",
+            type: "doughnut",
             data: {
                 labels: this.labels,
                 datasets: [
                     {
                         label: this.env._t(this.props.label),
                         data: this.data,
-                        // backgroundColor: '#F9B078',
-                        borderColor: '#F7367D',
-                        fill: false,
-                        cubicInterpolationMode: 'monotone',
-                        tension: 0.4
+                        backgroundColor: this.color,
                     },
                 ],
             },
             options: {
-                onClick: this.onLineClick.bind(this),
+                onClick: this.onDoughnutClick.bind(this),
             },            
         });
     }
 }
 
-LineChart.template = "academy_tshirt.LineChart";
-LineChart.props = {
+DoughnutChart.template = "academy_tshirt.DoughnutChart";
+DoughnutChart.props = {
     data: { type: Object },
     label: { type: String },
-    onLineClick: { type: Function },
+    onDoughnutClick: { type: Function },
 };

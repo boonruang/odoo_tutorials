@@ -1,5 +1,19 @@
+$o-academy_tshirt-bg-color-400: $gray-400;
 $o-academy_tshirt-bg-color: $gray-700;
+$o-academy_tshirt-bg-color-primary: #8abea0;
 
 .o_academy_tshirt_dashboard {
     background-color: $o-academy_tshirt-bg-color;
+}
+
+.o_academy_tshirt_dashboard-light {
+    background-color: $o-academy_tshirt-bg-color-400;
+}
+
+.o_academy_tshirt_dashboard-primary {
+    background-color: $o-academy_tshirt-bg-color-primary;
+}
+
+html .o_web_client>.o_action_manager {
+    overflow: scroll;
 }
