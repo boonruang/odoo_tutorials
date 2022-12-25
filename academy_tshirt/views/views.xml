@@ -55,7 +55,7 @@
       <field name="name">academy_tshirt.orders.kanban</field>
       <field name="model">academy_tshirt_order</field>
       <field name="arch" type="xml">
-        <kanban default_group_by="state" class="o_kanban_small_column" on_create="quick_create" quick_create_view="academy_tshirt.orders_form_view_simplified">
+        <kanban default_group_by="state" js_class="autoreloadkanban" class="o_kanban_small_column" on_create="quick_create" quick_create_view="academy_tshirt.orders_form_view_simplified">
           <field name="customer_id"/>
           <templates>
             <t t-name="kanban-box">
