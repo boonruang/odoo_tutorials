@@ -47,9 +47,9 @@ export class LineChart extends Component {
                     {
                         label: this.env._t(this.props.label),
                         data: this.data,
-                        // backgroundColor: '#F9B078',
+                        backgroundColor: '#F9B078',
                         borderColor: '#F7367D',
-                        fill: false,
+                        // fill: false,
                         cubicInterpolationMode: 'monotone',
                         tension: 0.4
                     },

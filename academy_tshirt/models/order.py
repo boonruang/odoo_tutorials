@@ -68,16 +68,16 @@ class ShirtOrder(models.Model):
         _logger.info('Label printed')
         return True
 
-    # @api.model
-    # def get_empty_list_help(self,help):
-    #     title = "no shirt oder"
-    #     base_url = self.env['ir.config_parameter'].sudo().get_param('web.base.url')
-    #     url = '%s/academy_tshirt/order' % base_url
-    #     content = 'People can make orders through the <a href=%(url)s>public page</a>.' % {'url': url}
-    #     return """
-    #         <p class="oe_view_nocontent_smiling_face">%s</p>
-    #         <p class="oe_view_nocontent_alias">%s</p>
-    #     """ % (title,content)
+    @api.model
+    def get_empty_list_help(self,help):
+        title = "no shirt oder"
+        base_url = self.env['ir.config_parameter'].sudo().get_param('web.base.url')
+        url = '%s/academy_tshirt/order' % base_url
+        content = 'People can make orders through the <a href=%(url)s>public page</a>.' % {'url': url}
+        return """
+            <p class="oe_view_nocontent_smiling_face">%s</p>
+            <p class="oe_view_nocontent_alias">%s</p>
+        """ % (title,content)
 
     @api.model
     def get_statistics(self):
@@ -101,6 +101,7 @@ class ShirtOrder(models.Model):
         total_quantity = self.read_group(new_this_month_domain, ['quantity'],[])[0]['quantity']
         nb_orders = self.search_count(this_month_domain)
         orders_by_size = self.read_group([['state','!=','cancelled']],[],['size'])
+        orders_by_state = self.read_group([['state','!=','']],[],['state'])
 
         return {
             'average_quantity' : 0 if not nb_orders else round(total_quantity / nb_orders, 2),
@@ -108,5 +109,6 @@ class ShirtOrder(models.Model):
             'nb_cancelled_orders' : nb_cancelled_orders,
             'nb_new_orders' : nb_new_orders,
             'orders_by_size' : {g['size'] : g['quantity'] for g in orders_by_size},
+            'orders_by_state' : {g['state'] : g['quantity'] for g in orders_by_state},
             'total_amount' : total_amount or 0
         }

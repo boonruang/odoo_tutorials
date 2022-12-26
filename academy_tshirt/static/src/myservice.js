@@ -76,6 +76,12 @@ class myService extends Component {
         const domain = `[('size','=', '${size}')]`;
         this.openOrders(title, domain);
     }    
+
+    openFilteredByStateOrders(state) {
+        const title = sprintf(this.env._t("Filtered orders by %s state"), state);
+        const domain = `[('state','=', '${state}')]`;
+        this.openOrders(title, domain);
+    }    
 }
 
 myService.components = { Layout, Card, PieChart, LineChart, BarChart, DoughnutChart };

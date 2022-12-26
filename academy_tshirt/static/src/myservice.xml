@@ -5,9 +5,9 @@
         <Layout display="display">
             <t t-set-slot="control-panel-bottom-left">
                 <button class="btn btn-primary" t-on-click="openCustomerView"> Customers </button>
-                <button class="btn btn-primary" t-on-click="increment"> Click me up! [<t t-esc="state.value" />]</button>
-                <button class="btn btn-primary" t-on-click="decrement"> Click me down! [<t t-esc="state.value" />]</button>
-                <button class="btn btn-primary"> <t t-esc="state.value" /> </button>
+                <!-- <button class="btn btn-primary" t-on-click="increment"> Click me up! [<t t-esc="state.value" />]</button>
+                <button class="btn btn-primary" t-on-click="decrement"> Click me down! [<t t-esc="state.value" />]</button> 
+                <button class="btn btn-primary"> <t t-esc="state.value" /> </button> -->
             </t>
         </Layout>
 
@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-6">
                     <div class="m-3">
-                        <Card className="'w-100'">
+                        <Card className="'w-75'">
                             <t t-set-slot="title">Shirt orders by size</t>
                             <PieChart data="statistics['orders_by_size']" label="'Shirt orders by size'" onPieClick.bind="openFilteredBySizeOrders"/>
                         </Card>
@@ -25,9 +25,9 @@
                 <div class="col-6">
                     <div class="m-3">
 
-                        <Card className="'w-100'">
-                            <t t-set-slot="title">Shirt orders by size</t>
-                            <BarChart data="statistics['orders_by_size']" label="'Shirt orders by size'" onBarClick.bind="openFilteredBySizeOrders"/>
+                        <Card className="'w-75'">
+                            <t t-set-slot="title">Shirt orders by state</t>
+                            <BarChart data="statistics['orders_by_state']" label="'Shirt orders by state'" onBarClick.bind="openFilteredByStateOrders"/>
                         </Card>                        
                     </div>                
                 </div>
@@ -35,7 +35,7 @@
             <div class="row">
                 <div class="col-6">
                     <div class="m-3">
-                        <Card className="'w-100'">
+                        <Card className="'w-75'">
                             <t t-set-slot="title">Shirt orders by size</t>
                             <LineChart data="statistics['orders_by_size']" label="'Shirt orders by size'" onLineClick.bind="openFilteredBySizeOrders"/>
                         </Card>
@@ -43,7 +43,7 @@
                 </div>            
                 <div class="col-6">
                     <div class="m-3">
-                        <Card className="'w-100'">
+                        <Card className="'w-75'">
                             <t t-set-slot="title">Shirt orders by size</t>
                             <DoughnutChart data="statistics['orders_by_size']" label="'Shirt orders by size'" onDoughnutClick.bind="openFilteredBySizeOrders"/>
                         </Card>

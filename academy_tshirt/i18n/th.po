@@ -40,12 +40,12 @@ msgstr "จำนวน"
 #. module: academy_tshirt
 #: model:ir.ui.menu,name:academy_tshirt.menu_root
 msgid "Academy T-Shirts"
-msgstr "อคาเดมี่ทีเชิ้ต"
+msgstr "วีพาโนทีเชิ้ต"
 
 #. module: academy_tshirt
 #: model:ir.model,name:academy_tshirt.model_academy_tshirt_order
 msgid "Academy T-shirt Orders"
-msgstr "การสั่งซื้อ อคาเดมี่ทีเชิ้ต"
+msgstr "การสั่งซื้อ วีพาโนทีเชิ้ต"
 
 #. module: academy_tshirt
 #: model:ir.model.fields.selection,name:academy_tshirt.selection__academy_tshirt_order__state__cancelled
@@ -113,8 +113,8 @@ msgstr "การสั่งซื้อ"
 #. module: academy_tshirt
 #: model:ir.actions.client,name:academy_tshirt.myservice
 #: model:ir.ui.menu,name:academy_tshirt.myservice_menu
-msgid "Services"
-msgstr "บริการ"
+msgid "Report"
+msgstr "รายงาน"
 
 #. module: academy_tshirt
 #: model:ir.model.fields,field_description:academy_tshirt.field_academy_tshirt_order__display_name
@@ -233,6 +233,13 @@ msgstr "ส่งแล้ว"
 #, python-format
 msgid "Shirt orders by size"
 msgstr "สั่งซื้อตามขนาด"
+
+#. module: academy_tshirt
+#. openerp-web
+#: code:addons/academy_tshirt/static/src/ลูกค้า_action.xml:0
+#, python-format
+msgid "Shirt orders by state"
+msgstr "สั่งซื้อตามขั้นตอน"
 
 #. module: academy_tshirt
 #: model:ir.model.fields,field_description:academy_tshirt.field_academy_tshirt_order__size

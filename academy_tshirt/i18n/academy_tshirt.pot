@@ -113,7 +113,7 @@ msgstr ""
 #. module: academy_tshirt
 #: model:ir.actions.client,name:academy_tshirt.myservice
 #: model:ir.ui.menu,name:academy_tshirt.myservice_menu
-msgid "Services"
+msgid "Report"
 msgstr ""
 
 
@@ -233,6 +233,13 @@ msgstr ""
 #: code:addons/academy_tshirt/static/src/client_action.xml:0
 #, python-format
 msgid "Shirt orders by size"
+msgstr ""
+
+#. module: academy_tshirt
+#. openerp-web
+#: code:addons/academy_tshirt/static/src/client_action.xml:0
+#, python-format
+msgid "Shirt orders by state"
 msgstr ""
 
 #. module: academy_tshirt
