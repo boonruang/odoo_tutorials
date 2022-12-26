@@ -1,31 +1,18 @@
 /** @odoo-module */
 
 import { registry } from "@web/core/registry";
-import { getDefaultConfig } from "@web/views/view";
 import { useService } from "@web/core/utils/hooks";
 import { Domain } from "@web/core/domain";
 
-const { Component, onWillStart,useSubEnv } = owl;
+const { Component, useState } = owl;
 
 export class StatSystray extends Component {
     setup() {
 
-        useSubEnv({
-            config: {
-                ...getDefaultConfig(),
-                ...this.env.config,
-            },
-        });
-
-
-        // this.statService = useService("statistics");
+        const tshirtService = useService("tshirtService");
+        this.statistics = useState(tshirtService.statistics);
         this.action = useService("action");
-        this.tshirtService = useService("tshirtService");
 
-        onWillStart(async () => {
-            // this.statistics = await this.statService.loadStatistics();
-            this.statistics = await this.tshirtService.loadStatistics();
-        });
     }
 
     openNewOrders() {
